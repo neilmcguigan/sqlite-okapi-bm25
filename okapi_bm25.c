@@ -29,6 +29,7 @@ static void okapi_bm25(sqlite3_context *pCtx, int nVal, sqlite3_value **apVal) {
 
     double sum = 0.0;
 
+    int i;
     for (int i = 0; i < termCount; i++) {
         int currentX = X_OFFSET + (3 * searchTextCol * (i + 1));
         double termFrequency = matchinfo[currentX];
